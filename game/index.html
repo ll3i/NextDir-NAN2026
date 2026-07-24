@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Director Loop — NAN 2026 | NextDir</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="mark">NextDir</span>
+        <span class="title">Director Loop</span>
+      </div>
+      <div class="meta">
+        <span id="roomLabel">ROOM 1/7</span>
+        <span id="scoreLabel">SCORE 0</span>
+        <span id="lvLabel">LV 1</span>
+        <span id="comboLabel">COMBO 0</span>
+        <span id="styleLabel">STYLE —</span>
+        <span id="modLabel">MOD —</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="play-panel">
+        <canvas id="game" width="960" height="540"></canvas>
+        <div class="hud">
+          <div class="buildline" id="buildLine">ATK 100% · RATE 100% · SET —</div>
+          <div class="skillline" id="skillLine">Q 액티브 READY · 차지샷(홀드)</div>
+          <div class="bar hp"><i id="hpFill"></i><span id="hpText">HP 100</span></div>
+          <div class="bar xp"><i id="xpFill"></i><span id="xpText">XP 0/20</span></div>
+          <div class="bar tension"><i id="tensionFill"></i><span id="tensionText">INTENSITY 0%</span></div>
+          <div class="keys">WASD · SHIFT 대시 · 마우스 조준/홀드 차지 · Q 액티브</div>
+        </div>
+        <div id="banner" class="banner hidden"></div>
+
+        <div id="overlay" class="overlay">
+          <div class="card">
+            <p class="eyebrow">Steam-hit lessons · Elden feel · Spire choice · BG3 memory · L4D pacing</p>
+            <h1>Director Loop</h1>
+            <p class="desc">
+              방마다 Director Modifier가 규칙을 바꾸고, Q 액티브·차지샷·신규 적 패턴이 전투 깊이를 만듭니다.
+              Why 패널에 개입 사유가 남습니다.
+            </p>
+            <button id="startBtn" type="button">런 시작</button>
+          </div>
+        </div>
+
+        <div id="cardPick" class="overlay hidden">
+          <div class="card wide">
+            <p class="eyebrow" id="pickEyebrow">LEVEL UP · 카드 선택</p>
+            <h2 id="pickTitle">강화 선택 (Skip 가능)</h2>
+            <div id="cardChoices" class="choices"></div>
+            <button id="skipBtn" class="skip" type="button">Skip — 덱/빌드 희석 방지</button>
+          </div>
+        </div>
+
+        <div id="branchPick" class="overlay hidden">
+          <div class="card wide">
+            <p class="eyebrow">ROUTE FORK · Spire식 리스크 선택</p>
+            <h2>다음 경로를 고르세요</h2>
+            <div class="choices">
+              <button class="choice" id="branchSafe" type="button">
+                <b>SAFE ROUTE</b>
+                <span>회복 + 카드 기회. 낮은 위험, 안정 성장.</span>
+              </button>
+              <button class="choice rare" id="branchElite" type="button">
+                <b>ELITE ROUTE</b>
+                <span>강한 전투. Rare 카드 확정 보상. 고위험 고보상.</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="result" class="overlay hidden">
+          <div class="card wide report-card">
+            <p class="eyebrow" id="resultEyebrow">RUN REPORT</p>
+            <h2 id="resultTitle">런 종료</h2>
+            <p id="resultDesc" class="desc"></p>
+            <div class="report-grid" id="resultReport"></div>
+            <ul id="resultTips" class="tips"></ul>
+            <div class="stats" id="resultStats"></div>
+            <button id="restartBtn" type="button">다시 도전</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="director-panel">
+        <h2>AI Director</h2>
+        <div class="chip-row">
+          <span class="chip" id="phaseChip">BUILD</span>
+          <span class="chip soft" id="budgetChip">budget 0</span>
+        </div>
+        <div class="block">
+          <h3>Memory</h3>
+          <p id="memoryText" class="decide">—</p>
+        </div>
+        <div class="block">
+          <h3>State</h3>
+          <p id="intensityText" class="decide">대기</p>
+        </div>
+        <div class="block">
+          <h3>Last Action</h3>
+          <p id="actionText" class="decide">—</p>
+        </div>
+        <div class="block">
+          <h3>Why</h3>
+          <p id="whyText" class="decide why">대기 · 개입 사유가 여기 표시됩니다</p>
+        </div>
+        <div class="block">
+          <h3>Timeline</h3>
+          <ol id="traceList" class="trace"></ol>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

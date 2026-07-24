@@ -1,0 +1,11 @@
+{
+  "name": "nan2026-nextdir",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "node tools/record_demo.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}

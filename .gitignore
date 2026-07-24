@@ -1,0 +1,7 @@
+node_modules/
+.playwright/
+*.log
+.DS_Store
+Thumbs.db
+submit/*.zip
+tools/playtest_report.json
