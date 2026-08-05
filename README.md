@@ -1,3 +1,5 @@
+![banner](assets/banner.svg)
+
 # Director Loop — NAN 2026 사전과제 (팀 NextDir)
 
 ![HTML5 Canvas](https://img.shields.io/badge/HTML5-Canvas-E34F26?logo=html5&logoColor=white)
@@ -13,6 +15,12 @@ Director는 플레이어의 상태·스타일·직전 방 결과를 관찰해 �
 - **팀:** NextDir (개인)
 - **공식:** https://nan2026.nhn.com/
 - **런타임 외부 LLM API 호출 없음** — 인게임 지능은 설명 가능한 상태머신 + budget + memory
+
+## 미리보기
+
+**🎮 브라우저에서 바로 플레이:** https://ll3i.github.io/NextDir-NAN2026/game/
+
+![Director Loop 게임플레이 — AI Director 패널](assets/preview.jpg)
 
 ## 실행 (Play)
 
