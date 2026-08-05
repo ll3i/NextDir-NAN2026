@@ -20,6 +20,14 @@ Director는 플레이어의 상태·스타일·직전 방 결과를 관찰해 �
 
 ![프로젝트 개요](assets/overview.svg)
 
+### 시스템 아키텍처
+
+![시스템 아키텍처](assets/architecture.svg)
+
+### 주요 결과
+
+![주요 결과](assets/results.svg)
+
 ## 미리보기
 
 **🎮 브라우저에서 바로 플레이:** https://ll3i.github.io/NextDir-NAN2026/game/

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Director Loop system architecture">
+  <defs>
+    <marker id="arrGray" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#C7CFDA"/>
+    </marker>
+    <marker id="arrAccent" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1454FE"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1280" height="720" fill="#F7F9FB"/>
+
+  <!-- header band -->
+  <rect x="72" y="48" width="4" height="34" rx="2" fill="#1454FE"/>
+  <text x="92" y="50" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="13" letter-spacing="3" fill="#6B7686">ARCHITECTURE</text>
+  <text x="92" y="92" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5" fill="#161B24">Director Loop<tspan fill="#3B7AFF">.</tspan></text>
+  <text x="1208" y="64" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="13" fill="#94A0B0">ll3i · NextDir-NAN2026</text>
+
+  <!-- GAME CORE container -->
+  <rect x="72" y="150" width="340" height="270" rx="16" fill="#F0F4FF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="92" y="178" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="12" letter-spacing="2" fill="#6B7686">GAME CORE</text>
+  <rect x="92" y="196" width="300" height="94" rx="10" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="112" y="234" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="16" font-weight="600" fill="#161B24">game/game.js</text>
+  <text x="112" y="258" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="12" fill="#6B7686">플레이어 · 적 · 전투 시스템</text>
+  <rect x="92" y="306" width="300" height="94" rx="10" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="112" y="344" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="16" font-weight="600" fill="#161B24">Canvas 2D 렌더러</text>
+  <text x="112" y="368" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="12" fill="#6B7686">게임 화면 드로잉</text>
+
+  <!-- AI DIRECTOR container (core: ink box) -->
+  <rect x="452" y="150" width="400" height="270" rx="16" fill="#F0F4FF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="472" y="178" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="12" letter-spacing="2" fill="#6B7686">AI DIRECTOR</text>
+  <rect x="472" y="194" width="360" height="206" rx="12" fill="#0B1B33"/>
+  <!-- stage 1 -->
+  <rect x="492" y="214" width="320" height="44" rx="8" fill="#16314F"/>
+  <text x="508" y="241" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="13.5" fill="#EDF1F7">updateDirector</text>
+  <text x="796" y="240" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#CADBFF">OBSERVE · DECIDE</text>
+  <polyline points="646,260 652,267 658,260" fill="none" stroke="#3B7AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- stage 2 -->
+  <rect x="492" y="272" width="320" height="44" rx="8" fill="#16314F"/>
+  <text x="508" y="299" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="13.5" fill="#EDF1F7">intervene</text>
+  <text x="796" y="298" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#CADBFF">ACT</text>
+  <polyline points="646,318 652,325 658,318" fill="none" stroke="#3B7AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- stage 3 -->
+  <rect x="492" y="330" width="320" height="44" rx="8" fill="#16314F"/>
+  <text x="508" y="357" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="13.5" fill="#EDF1F7">setWhy · logIntervention</text>
+  <text x="796" y="356" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#CADBFF">EXPLAIN</text>
+  <text x="652" y="392" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="11" fill="#CADBFF">state machine + budget + memory</text>
+
+  <!-- UI container -->
+  <rect x="892" y="150" width="316" height="270" rx="16" fill="#F0F4FF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="912" y="178" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="12" letter-spacing="2" fill="#6B7686">UI</text>
+  <rect x="912" y="196" width="276" height="58" rx="10" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="930" y="221" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="15" font-weight="600" fill="#161B24">Why 패널</text>
+  <text x="930" y="242" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="12" fill="#6B7686">개입 이유 표시</text>
+  <rect x="912" y="268" width="276" height="58" rx="10" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="930" y="293" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="15" font-weight="600" fill="#161B24">Timeline</text>
+  <text x="930" y="314" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="12" fill="#6B7686">개입 이력 기록</text>
+  <rect x="912" y="340" width="276" height="58" rx="10" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="930" y="365" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="15" font-weight="600" fill="#161B24">Run Report</text>
+  <text x="930" y="386" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="12" fill="#6B7686">런 종료 요약</text>
+
+  <!-- DEV PIPELINE container -->
+  <rect x="72" y="460" width="700" height="180" rx="16" fill="#F0F3F7" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="92" y="488" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="12" letter-spacing="2" fill="#6B7686">DEV PIPELINE</text>
+  <rect x="92" y="504" width="320" height="116" rx="10" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="112" y="540" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="16" font-weight="600" fill="#161B24">Playwright playtest.mjs</text>
+  <text x="112" y="564" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="12" fill="#6B7686">softlock 자동 검증</text>
+  <text x="112" y="584" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="12" fill="#6B7686">webm 데모 녹화</text>
+  <rect x="432" y="504" width="320" height="116" rx="10" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="452" y="540" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="16" font-weight="600" fill="#161B24">reportlab</text>
+  <text x="452" y="564" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="12" fill="#6B7686">PDF 제출물 자동 생성</text>
+
+  <!-- DEPLOY container -->
+  <rect x="812" y="460" width="396" height="180" rx="16" fill="#F0F3F7" stroke="#E2E7EE" stroke-width="1"/>
+  <text x="832" y="488" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="12" letter-spacing="2" fill="#6B7686">DEPLOY</text>
+  <rect x="832" y="504" width="356" height="116" rx="10" fill="#FFFFFF" stroke="#C7CFDA" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="852" y="540" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="16" font-weight="600" fill="#161B24">GitHub Pages</text>
+  <text x="852" y="564" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-size="12" fill="#6B7686">웹 브라우저에서 바로 플레이</text>
+
+  <!-- connections -->
+  <line x1="412" y1="236" x2="444" y2="236" stroke="#1454FE" stroke-width="1.5" marker-end="url(#arrAccent)"/>
+  <line x1="452" y1="294" x2="420" y2="294" stroke="#1454FE" stroke-width="1.5" marker-end="url(#arrAccent)"/>
+  <line x1="852" y1="352" x2="884" y2="352" stroke="#C7CFDA" stroke-width="1.5" marker-end="url(#arrGray)"/>
+  <line x1="242" y1="460" x2="242" y2="428" stroke="#C7CFDA" stroke-width="1.5" marker-end="url(#arrGray)"/>
+  <line x1="1010" y1="420" x2="1010" y2="452" stroke="#C7CFDA" stroke-width="1.5" marker-end="url(#arrGray)"/>
+
+  <!-- footer -->
+  <line x1="72" y1="676" x2="1208" y2="676" stroke="#C7CFDA" stroke-width="1"/>
+  <text x="72" y="702" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="12" fill="#94A0B0">game/game.js · Canvas 2D · Playwright playtest.mjs · reportlab PDF · GitHub Pages</text>
+</svg>
