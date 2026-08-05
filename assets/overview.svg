@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="Director Loop — 게임 AI 디렉터 개요">
+  <!-- background -->
+  <rect width="1280" height="640" fill="#F7F9FB"/>
+
+  <!-- ===== header band (0~120) ===== -->
+  <rect x="72" y="70" width="4" height="34" rx="2" fill="#1454FE"/>
+  <g font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace">
+    <text x="91" y="54" font-size="13" letter-spacing="3" fill="#1454FE">GAME · AI DIRECTOR</text>
+    <text x="1208" y="98" text-anchor="end" font-size="13" fill="#94A0B0">ll3i · NextDir-NAN2026</text>
+  </g>
+  <text x="90" y="98" font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif" font-weight="800" font-size="34" letter-spacing="-0.7" fill="#161B24">Director Loop<tspan fill="#3B7AFF">.</tspan></text>
+  <line x1="72" y1="120" x2="1208" y2="120" stroke="#E2E7EE" stroke-width="1"/>
+
+  <!-- ===== main loop : 4 step cards ===== -->
+  <!-- card 01 · Observe -->
+  <rect x="72" y="160" width="245" height="160" rx="14" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <!-- card 02 · Decide -->
+  <rect x="369" y="160" width="245" height="160" rx="14" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <!-- card 03 · Act -->
+  <rect x="666" y="160" width="245" height="160" rx="14" fill="#FFFFFF" stroke="#E2E7EE" stroke-width="1"/>
+  <!-- card 04 · Explain (ink emphasis) -->
+  <rect x="963" y="160" width="245" height="160" rx="14" fill="#0B1B33"/>
+
+  <g font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="12" letter-spacing="2">
+    <text x="96" y="196" fill="#3B7AFF">LOOP 01</text>
+    <text x="393" y="196" fill="#3B7AFF">LOOP 02</text>
+    <text x="690" y="196" fill="#3B7AFF">LOOP 03</text>
+    <text x="987" y="196" fill="#CADBFF">LOOP 04</text>
+  </g>
+  <g font-family="'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif">
+    <g font-weight="700" font-size="20" letter-spacing="-0.3">
+      <text x="96" y="231" fill="#161B24">Observe</text>
+      <text x="393" y="231" fill="#161B24">Decide</text>
+      <text x="690" y="231" fill="#161B24">Act</text>
+      <text x="987" y="231" fill="#EDF1F7">Explain</text>
+    </g>
+    <g font-size="13.5">
+      <text x="96" y="260" fill="#6B7686">intensity · style · memory</text>
+      <text x="96" y="281" fill="#6B7686">플레이 신호를 관찰</text>
+      <text x="393" y="260" fill="#6B7686">phase 전이 조건 판정</text>
+      <text x="393" y="281" fill="#6B7686">개입 budget 검사</text>
+      <text x="690" y="260" fill="#6B7686">spawn / heal / suppress</text>
+      <text x="690" y="281" fill="#6B7686">액션을 선택해 실행</text>
+      <text x="987" y="260" fill="#C7CFDA">Why 패널 —</text>
+      <text x="987" y="281" fill="#C7CFDA">모든 개입 사유 공개</text>
+    </g>
+  </g>
+
+  <!-- arrows between cards (Act→Explain 강조) -->
+  <line x1="325" y1="240" x2="350" y2="240" stroke="#C7CFDA" stroke-width="2"/>
+  <path d="M350 233.5 L361 240 L350 246.5 Z" fill="#C7CFDA"/>
+  <line x1="622" y1="240" x2="647" y2="240" stroke="#C7CFDA" stroke-width="2"/>
+  <path d="M647 233.5 L658 240 L647 246.5 Z" fill="#C7CFDA"/>
+  <line x1="919" y1="240" x2="944" y2="240" stroke="#1454FE" stroke-width="2"/>
+  <path d="M944 233.5 L955 240 L944 246.5 Z" fill="#1454FE"/>
+
+  <!-- loop-back : Explain → Observe -->
+  <path d="M1085 320 L1085 340 Q1085 348 1077 348 L662 348" fill="none" stroke="#CADBFF" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <path d="M618 348 L202 348 Q194 348 194 340 L194 334" fill="none" stroke="#CADBFF" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <path d="M188 334 L200 334 L194 323 Z" fill="#CADBFF"/>
+  <text x="640" y="353" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="14" fill="#94A0B0">↺</text>
+
+  <!-- ===== aux row : 4-phase state badges ===== -->
+  <text x="72" y="440" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="12" letter-spacing="2" fill="#94A0B0">4-PHASE DIRECTOR STATE</text>
+
+  <rect x="72" y="458" width="84" height="36" rx="18" fill="#F0F4FF"/>
+  <rect x="200" y="458" width="142" height="36" rx="18" fill="#F0F4FF"/>
+  <rect x="386" y="458" width="118" height="36" rx="18" fill="#F0F4FF"/>
+  <rect x="548" y="458" width="84" height="36" rx="18" fill="#F0F4FF"/>
+  <g font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="14" fill="#1454FE">
+    <text x="114" y="481" text-anchor="middle">BUILD</text>
+    <text x="271" y="481" text-anchor="middle">SUSTAIN_PEAK</text>
+    <text x="445" y="481" text-anchor="middle">PEAK_FADE</text>
+    <text x="590" y="481" text-anchor="middle">RELAX</text>
+    <text x="678" y="481">↺ BUILD</text>
+  </g>
+  <g stroke="#1454FE" stroke-width="2">
+    <line x1="164" y1="476" x2="184" y2="476"/>
+    <line x1="350" y1="476" x2="370" y2="476"/>
+    <line x1="512" y1="476" x2="532" y2="476"/>
+    <line x1="640" y1="476" x2="660" y2="476"/>
+  </g>
+  <g fill="#1454FE">
+    <path d="M184 470.5 L192 476 L184 481.5 Z"/>
+    <path d="M370 470.5 L378 476 L370 481.5 Z"/>
+    <path d="M532 470.5 L540 476 L532 481.5 Z"/>
+    <path d="M660 470.5 L668 476 L660 481.5 Z"/>
+  </g>
+
+  <!-- ===== footer data line ===== -->
+  <line x1="72" y1="590" x2="1208" y2="590" stroke="#C7CFDA" stroke-width="1"/>
+  <text x="72" y="618" font-family="'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace" font-size="12" fill="#94A0B0">Vanilla JS · Canvas 2D · 외부 LLM API 없음 · Playwright 자동 플레이테스트 · 7분 런</text>
+</svg>
